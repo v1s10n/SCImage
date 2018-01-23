@@ -1,0 +1,14 @@
+doctype html
+html(ng-app='SCImgapp')
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='./bootstrap/css/amelia.bootstrap.css')
+  body
+    .container
+      block content
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/angular/SCImgapp.js')
+    script(src='/angular/angular.min.js')

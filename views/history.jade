@@ -1,0 +1,16 @@
+extends layout
+block content
+  #banner.page-header
+    .row
+      .col-lg-6
+        h1 History
+
+  .row
+    .col-xs-12.col-sm-8(ng-controller="keywordsListCtrl as keyctrl")
+      .row.list-group
+        for key in dbkey
+          .col-xs-12.list-group-item
+            h4
+              a(href="/History/#{key}")#{key}
+  script(src='/angular/SCImgapp.js')
+  script(src='/angular/angular.min.js')

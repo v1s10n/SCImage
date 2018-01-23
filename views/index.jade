@@ -1,0 +1,10 @@
+extends layout
+block content
+  .container
+    form.form-signin(action="/",method="post")
+      h2.form-signin-heading Please Search
+
+      input.input-block-level(type="text", name="keyword", placeholder="Keyword")
+
+      button.btn.btn-large.btn-primary(type="submit") Search
+  .container
