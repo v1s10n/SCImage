@@ -11,13 +11,19 @@ module.exports.retrieve= function(Keyword,modelInstance, callback){
   var db = mongoose.connect(url);
 
   //var A = modelInstance;//mongoose.model(Keyword,'');
+  var schema = new Schema({
+      keyword: String,
+      filename: String,
+      img: { data: Buffer, contentType: String }
+  },{collection: "Keywords"});
+  var A = mongoose.model("kbasdafaf", schema);
 
   mongoose.connection.on('open', function () {
     console.error('mongo is open');
-    //var a = new A;
+  //  var a = new A;
     //var list = db.collection;
-  var newmodelkite = new modelInstance;
-  modelInstance.distinct("keyword", function (err, doc) {
+  //var newmodelkite = new modelInstance;
+  A.distinct("keyword", function (err, doc) {
     if (err) return next(err);
     console.log(doc);
     console.log('Connection closed');
